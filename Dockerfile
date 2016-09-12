@@ -14,10 +14,3 @@ RUN set -ex; \
     find /usr/lib/python2.7 -name '*.py[co]' -print0 | xargs -0 rm; \
     rm -fr /root/.cache
 COPY app .
-
-EXPOSE 80
-EXPOSE 443
-
-# Entrypoint
-WORKDIR /
-CMD ["/var/www/app/main.py"]
